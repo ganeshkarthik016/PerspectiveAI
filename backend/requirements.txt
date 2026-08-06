@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+transformers
+torch
+sentencepiece
+accelerate
+safetensors
+newsapi-python
+requests
+python-dotenv
