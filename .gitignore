@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# FastAPI cache
+.pytest_cache/
+
+# Build files
+dist/
+build/
+
+# Temporary files
+*.tmp
+
+# Coverage
+.coverage
+htmlcov/
+
+# Model checkpoints (if you retrain)
+checkpoint-*/
+
+# Hugging Face cache
+.cache/
+huggingface/
+
+# Runtime outputs
+outputs/
+
+# Temporary datasets
+data/
+
+# OS
+Thumbs.db
