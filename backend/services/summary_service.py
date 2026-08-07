@@ -1,4 +1,7 @@
-from transformers import pipeline
+from transformers import pipeline, AutoTokenizer
+
+# Load tokenizer and summarizer once
+tokenizer = AutoTokenizer.from_pretrained("facebook/bart-large-cnn")
 
 summarizer = pipeline(
     "summarization",
@@ -8,15 +11,37 @@ summarizer = pipeline(
 
 def summarize(text: str):
 
-    # Prevent very short articles from being summarized
+    # Skip summarization for very short articles
     if len(text.split()) < 120:
         return text
 
-    summary = summarizer(
-        text[:3000],
-        max_length=120,
-        min_length=40,
-        do_sample=False
-    )
+    try:
 
-    return summary[0]["summary_text"]
+        # Truncate safely to BART's maximum input size (1024 tokens)
+        inputs = tokenizer(
+            text,
+            max_length=1024,
+            truncation=True,
+            return_tensors="pt"
+        )
+
+        truncated_text = tokenizer.decode(
+            inputs["input_ids"][0],
+            skip_special_tokens=True
+        )
+
+        summary = summarizer(
+            truncated_text,
+            max_length=120,
+            min_length=40,
+            do_sample=False
+        )
+
+        return summary[0]["summary_text"]
+
+    except Exception as e:
+
+        print("Summarization Error:", e)
+
+        # Fallback so the app never crashes
+        return text[:400] + "..."
