@@ -1,27 +1,38 @@
-type Props = {
+interface Props {
+
     onClick: () => void;
-};
+
+}
 
 export default function SearchButton({
-    onClick
+
+    onClick,
+
 }: Props) {
 
     return (
 
         <button
+
+            id="search-btn"
+
             onClick={onClick}
+
             className="
-            rounded-xl
-            bg-blue-600
-            px-8
-            py-4
-            text-white
-            font-semibold
-            hover:bg-blue-700
-            transition
+                px-8
+                rounded-2xl
+                bg-blue-600
+                hover:bg-blue-700
+                text-white
+                font-semibold
+                shadow-lg
+                transition
             "
+
         >
-            Search
+
+            Analyze
+
         </button>
 
     );
