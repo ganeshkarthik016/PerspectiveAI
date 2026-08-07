@@ -1,5 +1,7 @@
+import Home from "./pages/Home";
+
 function App() {
-  return <div>Hello NewsLens</div>;
+    return <Home />;
 }
 
 export default App;

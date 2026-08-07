@@ -1,15 +1,49 @@
 @import "tailwindcss";
 
-html,
-body,
-#root {
-    width: 100%;
-    min-height: 100%;
+html {
+
+    scroll-behavior: smooth;
+
 }
 
-body{
-    margin:0;
-    background:#F8FAFC;
-    color:#111827;
-    font-family:Inter,sans-serif;
+body {
+
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef7ff
+        );
+
+    color: #111827;
+
+}
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
 }
