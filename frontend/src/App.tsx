@@ -1,12 +1,5 @@
-
-
 function App() {
-
-  return (
-    <>
-      
-    </>
-  )
+  return <div>Hello NewsLens</div>;
 }
 
-export default App
+export default App;
