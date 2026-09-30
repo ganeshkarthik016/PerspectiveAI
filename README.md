@@ -2,7 +2,7 @@
 
 ### AI-Powered News Perspective Analyzer
 
-NewsLens is a web application that helps users explore how different news sources present the same topic.
+PerspectiveAI is a web application that helps users explore how different news sources present the same topic.
 
 The application retrieves relevant news articles, extracts their content, generates concise summaries, and uses a fine-tuned **RoBERTa** model to classify the political perspective of each article as **Left, Center, or Right**.
 
@@ -372,7 +372,7 @@ See [`LICENSE`](LICENSE) for details.
 
 ## ⚖️ Disclaimer
 
-NewsLens is an educational and research-oriented project.
+PerspectiveAI is an educational and research-oriented project.
 
 The political perspective labels are **AI-generated predictions** based on patterns learned from the training data. They do not represent an absolute judgment of an article's political ideology, factual accuracy, or credibility.
 
