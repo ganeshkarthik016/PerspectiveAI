@@ -1,4 +1,4 @@
-# NewsLens 🔎
+# PerspectiveAI 
 
 ### AI-Powered News Perspective Analyzer
 
